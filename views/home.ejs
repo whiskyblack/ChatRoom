@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Room</title>
+    <script src="jquery.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="main.js"></script>
+</head>
+<body>
+
+<div id="main">
+
+    <div id="left">
+        <div id="room-title">
+            Room List
+        </div>
+
+        <div id="room-list">
+
+        </div>
+    </div>
+
+    <div id="right">
+        <div id="top">
+            <div id="current-room">Room: ABCD</div>
+            <div id="create">
+                <input type="text" id="txtRoom" title=""/>
+                <input type="button" value="Tạo room" id="btnCreate"/>
+            </div>
+        </div>
+
+        <div id="list-message">
+
+        </div>
+
+        <div id="bottom">
+            Your name: <br>
+            <input type="text" id="txtName"/><br>
+            Mesage: <br>
+            <input type="text" id="txtMessage"/>
+            <input type="button" id="btnSend" value="Send"/>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

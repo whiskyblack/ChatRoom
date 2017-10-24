@@ -1,0 +1,11 @@
+body {background: #f6f4ff}
+#main{background: transparent; width: 800px; margin: auto;}
+#left{background: #ebfaff; width: 27%;  float: left; margin: 1%}
+#right{background: #fff8f1; width: 66%;  float: right; margin: 1%}
+#room-title{background: transparent; border: solid 1px black; text-align: center; font-weight: bold; font-size: 20px; padding: 5px}
+#room-list{background: transparent; border: solid 1px black; border-top: none; padding: 5px}
+#top{background: #c8ffd6; padding: 10px; align-items: center; height: 20px}
+#bottom{text-align: left; background: #d1e0ff; padding: 10px}
+#list-message{min-height: 200px; background: #ffecea; padding: 10px}
+#current-room{background: #1b1111; color: white; padding-left: 20px; padding-right: 20px; float: left; width: auto}
+#create{float: right; width: auto}
