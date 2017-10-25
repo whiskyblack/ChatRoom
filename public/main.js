@@ -4,10 +4,17 @@ var socket=io("http://localhost:9999");
 socket.on("create-room-success", function (data) {
     $("#room-list").html("");
     data.map(function (t) {
-        if (t.length!==20)
-            $("#room-list").append("<div id='room'>"+t+"</div>");
+        if (t.length!==20) {
+            var now = new Date();
+            var id = 'room-' + now.getTime();
+            $("#room-list").append("<div id='"+id+"'>" + t + "</div>");
+            $('#' + id).bind('click', function (e) {
+                alert('clicked on div in #room-list: ' + $(this).attr('id'));
+            });
+        }
     })
 });
+
 
 socket.on("in-room", function (data) {
     $("#current-room").html("Room: "+data);
@@ -30,4 +37,7 @@ $(document).ready(function () {
             alert("Input your name!");
         }
     });
+    // $('#room-list > div').live('click', function (e) {
+    //     alert('clicked on div in #room-list');
+    // });
 });
